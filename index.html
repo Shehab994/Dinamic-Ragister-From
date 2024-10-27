@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinamic Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="slider-box"></div>
+
+        <div class="form-container sign-Up">
+            <form>
+                <h1>Create Account</h1>
+                <div class="social-icon">
+                    <i class="bi bi-google"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+                <span>Or use your email for ragisteration</span>
+                <input type="text" placeholder="Neme">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Sign Up</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Sign In</h1>
+                <div class="social-icon">
+                    <i class="bi bi-google"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-linkedin"></i>
+                </div>
+                <span>Or use your email for password</span>
+
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="">Forget Your Password?</a>
+                <button>Sign In</button>
+            </form>
+        </div>
+
+
+
+
+        <div class="first">
+
+            <div class="toggle-left toggle-panel">
+                <h1>Hello Friend !</h1>
+                <p>Redister with your personal details <br> to use all of site features</p>
+                <button onclick="ragister()" class="hidden">Ragister</button>
+            </div>
+
+            <div class="toggle-right toggle-panel">
+                <h1>Wellcome Back !</h1>
+                <p>Enter your personal details to use <br> all of site feature</p>
+                <button onclick="login()" class="hidden">Login</button>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

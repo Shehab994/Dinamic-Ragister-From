@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(255, 196, 219);
+}
+
+.container {
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+}
+
+
+
+
+.container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: .3px;
+    margin: 20px 0;
+    color: white;
+}
+
+.container span {
+    font-size: 14px;
+    color: #5a5a5a;
+    padding: .3rem 0;
+
+}
+
+.container .first h1 {
+    color: white;
+}
+
+.container h1 {
+    margin-bottom: 1rem;
+    color: rgb(46, 46, 46);
+}
+
+.container a {
+    text-decoration: none;
+    color: #5f5f5f;
+    font-size: 13px;
+    margin: 15px 0 10px;
+    font-size: 14px;
+}
+
+.slider-box {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(223, 99, 146);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1111;
+}
+
+.slider-box.toggle {
+
+    animation: login ease-in-out 1s forwards;
+}
+
+@keyframes login {
+    50% {
+        border-radius: 50%;
+        transform: scale(0);
+    }
+
+    100% {
+        right: 50%;
+    }
+}
+
+.slider-box.toggle2 {
+
+    animation: ragister ease-in-out 1s reverse forwards;
+}
+
+@keyframes ragister {
+    50% {
+        border-radius: 50%;
+        transform: scale(0);
+    }
+
+    100% {
+        right: 50%;
+    }
+}
+
+.container button {
+    background-color: rgb(223, 99, 146);
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid white;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.container button.hidden {
+    background-color: transparent;
+    color: white;
+}
+
+.container form {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all .6s ease-in-out;
+}
+
+.sign-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+
+.container.active .sign-in {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+
+
+
+.sign-Up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+
+.container.active .sign-Up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s ease-in-out;
+}
+
+@keyframes move {
+
+    0%,
+    49.99% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    50%,
+    100% {
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icon i {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.first .toggle-left {
+
+    position: absolute;
+    right: 0;
+    z-index: 5555;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle-left {
+    transform: translateX(50%);
+}
+
+.first .toggle-right {
+
+    position: absolute;
+    right: 0;
+    z-index: 5555;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+    left: -100%;
+}
+
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+
+}
+
+
+
+.toggle-left {
+    transform: translateX(-200%);
+
+}
+
+.container.active .toggle-left {
+    transform: translateX(100%);
+
+
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
+}
